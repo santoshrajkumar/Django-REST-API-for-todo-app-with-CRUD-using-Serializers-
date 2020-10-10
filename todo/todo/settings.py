@@ -25,7 +25,7 @@ SECRET_KEY = 'x06wfwwp**!-(qacp*&u8e4o$azxx1fkt_y(jkv1b9k7wf6sfy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://smrtodorest.herokuapp.com']
+ALLOWED_HOSTS = ['smrtodorest.herokuapp.com']
 
 
 # Application definition
