@@ -25,7 +25,7 @@ SECRET_KEY = 'x06wfwwp**!-(qacp*&u8e4o$azxx1fkt_y(jkv1b9k7wf6sfy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://smrtodorest.herokuapp.com']
 
 
 # Application definition
@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
     'api',
-    'app',
 ]
 
 MIDDLEWARE = [
@@ -50,7 +50,20 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
+
+
+
+
+CORS_ALLOW_ALL_ORIGINS = False
+
+
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:5500",
+]
+
 
 ROOT_URLCONF = 'todo.urls'
 
@@ -123,6 +136,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
