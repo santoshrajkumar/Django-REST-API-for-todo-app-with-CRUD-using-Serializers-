@@ -8,6 +8,7 @@ cffi==1.14.0
 Django==3.0.3
 django-cors-headers==3.5.0
 django-filter==2.3.0
+django-rest-framework==0.1.0
 django-storages==1.9.1
 docutils==0.15.2
 Faker==4.1.0
