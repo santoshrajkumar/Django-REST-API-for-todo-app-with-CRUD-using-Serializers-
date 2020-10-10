@@ -1,24 +1,30 @@
 ## CORS configuration
 
-Install from **pip**:
+Install from **pip** in your environment:
 
-.. code-block:: sh
+```
+pip install django-cors-headers
 
-    python -m pip install django-cors-headers
+```
+
 
 and then add it to your installed apps in settings.py file:
 
-.. code-block:: python
+```python
 
-    INSTALLED_APPS = [
+INSTALLED_APPS = [
         ...
         'corsheaders',
         ...
     ]
 
+```
+
+    
+
 Configure a middleware class to listen to responses in settings.py file:
 
-.. code-block:: python
+```python
 
     MIDDLEWARE = [
         ...
@@ -26,6 +32,10 @@ Configure a middleware class to listen to responses in settings.py file:
         'django.middleware.common.CommonMiddleware',
         ...
     ]
+
+```
+
+
 
 Then add allowed origins in the settins.py file:
 
@@ -35,8 +45,8 @@ CORS_ALLOW_ALL_ORIGINS = False
 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:5500",
-    "https://smrtodorest.web.app",
+    "http://yourallowedorigin.com",
+    "https://yourallowedorigin2.com",
 ]
 
 ```
